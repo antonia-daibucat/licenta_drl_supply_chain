@@ -10,7 +10,7 @@ realizate pe baza unui simulator DRL open-source (Stefan Lopez, 2020).
 - `lead_time_sensitivity.py` — Script pentru testarea sensibilității agentului 
   la variații ale timpilor de livrare
 - `sensitivity_results.csv` — Rezultatele celor 12 scenarii × 200 episoade
--  `grafic.py`- script pentru generarea unui grafic care demonstrează că agentul învață
+-  `grafic.py`- script pentru generarea graficului care evidențiază convergența algoritmului A2C pe parcursul antrenării
 
 Cele patru analize experimentale acoperă:
 - **H1** — Testarea normalității cererii simulate (Shapiro-Wilk)
@@ -37,9 +37,14 @@ Cele patru analize experimentale acoperă:
    `saves/best/best_+1977.900_3692000.dat`
 4. Se rulează:
    `python lead_time_sensitivity.py`
-5. Rezultatele sunt salvate automat în `sensitivity_results.csv`
+6. Rezultatele sunt salvate automat în `sensitivity_results.csv`
+
+### Generarea graficului
+1. Se copiază `grafic.py` în folderul rădăcină al proiectului
+2. Se rulează:
+   `python grafic.py`
 
 ## Dependențe
 - Python 3.6+
-- torch, numpy, scipy, pandas, matplotlib
+- PyTorch, numpy, scipy, pandas, matplotlib
 - Repository original: https://github.com/stefan-lopez/supply_chain_reinforcement_learning
